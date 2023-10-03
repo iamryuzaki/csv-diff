@@ -1,7 +1,7 @@
-import { app, BrowserWindow, ipcMain } from "electron";
+import {app, BrowserWindow, ipcMain} from "electron";
 import path from "path";
-import { WindowConfig } from "../config/window.config";
-import { AppConfig } from "../config/app.config";
+import {WindowConfig} from "../config/window.config";
+import {AppConfig} from "../config/app.config";
 
 export class ElectronService {
     public static mainWindow: BrowserWindow;
@@ -37,6 +37,7 @@ export class ElectronService {
             // titleBarOverlay: true,
             // titleBarStyle: "hidden",
             maximizable: false,
+            autoHideMenuBar: true
         });
 
         this.mainWindow.loadFile("www/index.html");
